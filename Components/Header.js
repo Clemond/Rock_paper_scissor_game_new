@@ -8,6 +8,8 @@ export default function Header() {
   );
 }
 
+// STYLESHEETS
+
 const styles = StyleSheet.create({
   header: {
     backgroundColor: "beige",
