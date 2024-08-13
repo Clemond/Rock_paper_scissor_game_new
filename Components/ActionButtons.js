@@ -30,21 +30,22 @@ export default function ActionButtons({ onPress }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    margin: 10,
+    margin: 50,
   },
   box: {
-    width: 300,
-    height: 280,
-    backgroundColor: "red",
+    width: 350,
+    height: 350,
+    backgroundColor: "#2C3E50",
     borderWidth: 3,
-    position: "relative",
+    borderRadius: 175,
+    //position: "relative",  // No need?
   },
   circle: {
-    width: 130,
-    height: 130,
-    borderRadius: 65,
+    width: 155,
+    height: 155,
+    borderRadius: 77.5,
+    borderWidth: 1,
     backgroundColor: "lightblue",
     alignItems: "center",
     justifyContent: "center",
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   centerBaseLine: {
     bottom: 0,
     left: "50%",
-    marginLeft: -65,
+    marginLeft: -77.5,
     margin: 10,
   },
 });

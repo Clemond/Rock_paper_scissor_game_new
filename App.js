@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "./Components/Header";
 import ActionButtons from "./Components/ActionButtons";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function App() {
   const handlePress = (choice) => {
@@ -9,13 +10,10 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={["#FF6347", "#FFD700"]} style={styles.container}>
       <Header />
-
-      <View>
-        <ActionButtons onPress={handlePress} />
-      </View>
-    </View>
+      <ActionButtons onPress={handlePress} />
+    </LinearGradient>
   );
 }
 
@@ -24,11 +22,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-  },
-  actionButtonBox: {
-    flexDirection: "row",
-    justifyContent: "center",
-    padding: 10,
   },
 });
