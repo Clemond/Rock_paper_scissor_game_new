@@ -40,6 +40,15 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 175,
     //position: "relative",  // No need?
+
+    // IOS Shadow (Elevation)
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.2,
+    shadowRadius: 20,
+
+    // Android Shadow (Elevation)
+    elevation: 20,
   },
   circle: {
     width: 155,

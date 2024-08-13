@@ -29,5 +29,12 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     fontSize: 20,
     color: "white",
+    // Shadow properties for text
+    textShadowColor: "#000",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 10,
+
+    // Adding a bit of elevation on Android (if needed)
+    elevation: 5,
   },
 });
