@@ -29,7 +29,6 @@ export default function ActionButtons({ onPress }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
     margin: 50,
   },

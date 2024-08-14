@@ -7,7 +7,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 
 export default function App() {
-  const [userChoice, setUserChoice] = useState("non right now");
+  const [userChoice, setUserChoice] = useState("No pick right now");
 
   const handleUserChoice = (choice) => {
     setUserChoice(choice);

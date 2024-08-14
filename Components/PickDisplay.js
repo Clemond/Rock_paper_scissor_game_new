@@ -3,8 +3,8 @@ import { useState } from "react";
 
 export default function PickDisplay({ choice }) {
   return (
-    <View styles={styles.container}>
-      <Text>This is your choice: {choice}</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>This is your choice: {choice}</Text>
     </View>
   );
 }
@@ -13,4 +13,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  text: {},
 });
