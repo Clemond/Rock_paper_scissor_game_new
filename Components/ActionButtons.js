@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, StyleSheet, Pressable, Image } from "react-native";
 
 export default function ActionButtons({ onPress }) {
   return (
@@ -8,18 +8,27 @@ export default function ActionButtons({ onPress }) {
           onPress={() => onPress("Rock")}
           style={[styles.circle, styles.topLeft]}
         >
+          <Image source={require("../assets/rock.png")} />
           <Text>Rock</Text>
         </Pressable>
+
         <Pressable
           onPress={() => onPress("Paper")}
           style={[styles.circle, styles.centerBaseLine]}
         >
+          <Image
+            source={require("../assets/paper.png")}
+            style={styles.imagePaperStyle}
+          />
+
           <Text>Paper</Text>
         </Pressable>
+
         <Pressable
           onPress={() => onPress("Scissors")}
           style={[styles.circle, styles.topRight]}
         >
+          <Image source={require("../assets/scissors.png")} />
           <Text>Scissors</Text>
         </Pressable>
       </View>
@@ -74,5 +83,8 @@ const styles = StyleSheet.create({
     left: "50%",
     marginLeft: -77.5,
     margin: 10,
+  },
+  imagePaperStyle: {
+    marginLeft: -3,
   },
 });

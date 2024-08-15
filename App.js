@@ -1,19 +1,18 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import ActionButtons from "./Components/ActionButtons";
 import PickDisplay from "./Components/PickDisplay";
 import ComputerLogic from "./Logic/ComputerLogic";
 import WinnerLogic from "./Logic/WinnerLogic";
-import { LinearGradient } from "expo-linear-gradient";
-import { useState, useEffect } from "react";
 
 export default function App() {
   const [userChoice, setUserChoice] = useState("");
   const [computerChoice, setComputerChoice] = useState("");
   const [result, setResult] = useState("");
 
-  const handleUserChoice = (choice) => {
+  const handleChoices = (choice) => {
     const computerPick = ComputerLogic();
     setUserChoice(choice);
     setComputerChoice(computerPick);
@@ -33,7 +32,7 @@ export default function App() {
   return (
     <LinearGradient colors={["#FF6347", "#FFD700"]} style={styles.container}>
       <Header />
-      <ActionButtons onPress={handleUserChoice} />
+      <ActionButtons onPress={handleChoices} />
       <PickDisplay
         choice={userChoice}
         computerChoice={computerChoice}
